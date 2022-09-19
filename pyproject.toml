@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sorgens-kammer"
+version = "0.0.1"
+description = ""
+authors = ["Igor Golyanov <thornograph@gmail.com>"]
+readme = "README.md"
+packages = [{include = "sorgens_kammer"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymongo = "^4.2.0"
+lxml = "^4.9.1"
+bson = "^0.5.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
