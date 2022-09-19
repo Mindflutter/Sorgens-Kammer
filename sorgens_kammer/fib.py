@@ -23,12 +23,13 @@ def fib_for(n):
 def fib_recursive(n):
     if n in [1, 2]:
         return 1
-    return fib_recursive(n-1) + fib_recursive(n-2)
+    return fib_recursive(n - 1) + fib_recursive(n - 2)
 
 
 fib_while(10)
 print('---------------')
 fib_for(10)
 print('---------------')
+# this prints just the n-th number in the sequence
 print(fib_recursive(10))
 print('---------------')

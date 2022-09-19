@@ -1,6 +1,3 @@
-from random import randint
-
-
 def quicksort(the_list, count=0):
     count += 1
     if len(the_list) < 2:

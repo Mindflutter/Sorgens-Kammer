@@ -1,4 +1,4 @@
-from itertools import izip, izip_longest
+from itertools import zip_longest
 
 
 def construct_dict(key_list, value_list):
@@ -9,12 +9,12 @@ def construct_dict(key_list, value_list):
     # keys must be unique
     key_list = list(set(key_list))
     if len(key_list) > len(value_list):
-        return dict(izip_longest(key_list, value_list))
+        return dict(zip_longest(key_list, value_list))
     else:
-        return dict(izip(key_list, value_list))
+        return dict(zip(key_list, value_list))
 
 
-k = [1, 1, 1, 2, 3, 4, 1, 1, 5, 5, 2, 1, 6]
+k = [1, 1, 1, 2, 3, 4, 1, 1, 5, 5, 2, 1, 6, 7, 8, 9]
 v = ['', 2, 3, 4, 5, 6]
 
-print construct_dict(k, v)
+print(construct_dict(k, v))

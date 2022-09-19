@@ -6,12 +6,12 @@ TODO: add various metadata.
 TODO: handle multiple possible error cases.
 """
 
-from pymongo import MongoClient
-from bson.objectid import ObjectId
-
-import time
-import os
 import logging
+import os
+import time
+
+from bson.objectid import ObjectId
+from pymongo import MongoClient
 
 
 class FileSystemHandler(object):

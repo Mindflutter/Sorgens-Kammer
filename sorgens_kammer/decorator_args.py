@@ -7,9 +7,11 @@ def dec_with_arg(log_level):
     def actual_dec(func):
         # Innermost layer 3 - the thing doing all the job
         def wrapped(*args, **kwargs):
-            print log_level, args, kwargs
+            print(log_level, args, kwargs)
             func(*args, **kwargs)
+
         return wrapped
+
     return actual_dec
 
 

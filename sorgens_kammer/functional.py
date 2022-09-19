@@ -1,7 +1,7 @@
-from typing import List, Any, Union
 from functools import reduce
+from typing import List
 
-l: List[Union[int, Any]] = [6, 5, 0, 3, 5, 1, 2, 3, 5, 4, 5, 6, 6, 5, 7, 5, 5, 10, 5, 0]
+l: List[int] = [6, 5, 0, 3, 5, 1, 2, 3, 5, 4, 5, 6, 6, 5, 7, 5, 5, 10, 5, 0]
 s = 'abcdefg'
 
 # map: apply function to sequence

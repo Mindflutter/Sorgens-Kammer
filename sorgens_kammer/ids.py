@@ -1,8 +1,9 @@
 # arguments are passed by reference. list contents will be modified
-def f(l=[]):
-    print(id(l))
-    l.append(1)
-    return l
+# don't actually use lists as default args
+def f(the_list=[]):
+    print(id(the_list))
+    the_list.append(1)
+    return the_list
 
 
 # same id, same l
@@ -11,8 +12,8 @@ print(f())
 print(f())
 
 # different id, l redefined
-print(f(l=[2]))
-print(f(l=[3, 4]))
+print(f(the_list=[2]))
+print(f(the_list=[3, 4]))
 
 # previous l again!
 print(f())

@@ -13,15 +13,16 @@ def create_list(list_1, list_2):
 def create_list_optimized(list_1, list_2):
     return list(set(list_1) - set(list_2))
 
+
 l1 = range(1000)
 l2 = range(1, 1001, 2)
 
 start = time.time()
-print create_list(l1, l2)
+print(create_list(l1, l2))
 finish = time.time() - start
-print finish
+print(finish)
 
 start = time.time()
-print create_list_optimized(l1, l2)
+print(create_list_optimized(l1, l2))
 finish = time.time() - start
-print finish
+print(finish)
