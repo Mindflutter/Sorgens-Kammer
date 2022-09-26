@@ -27,9 +27,9 @@ def fib_recursive(n):
 
 
 fib_while(10)
-print('---------------')
+print("---------------")
 fib_for(10)
-print('---------------')
+print("---------------")
 # this prints just the n-th number in the sequence
 print(fib_recursive(10))
-print('---------------')
+print("---------------")

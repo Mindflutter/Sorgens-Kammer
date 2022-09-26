@@ -1,5 +1,5 @@
 # arguments are passed by reference. list contents will be modified
-# don't actually use lists as default args
+# don"t actually use lists as default args
 def f(the_list=[]):
     print(id(the_list))
     the_list.append(1)
@@ -20,8 +20,8 @@ print(f())
 print(f())
 
 # note different ids, coz strings are immutable
-s = 'fizz'
+s = "fizz"
 print(id(s))
-s += 'buzz'
+s += "buzz"
 print(id(s))
 print(s)

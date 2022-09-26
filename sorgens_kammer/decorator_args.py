@@ -16,7 +16,7 @@ def dec_with_arg(log_level):
     return actual_dec
 
 
-@dec_with_arg('DEBUG')
+@dec_with_arg("DEBUG")
 def func_with_any_args(*args, **kwargs):
     pass
 
@@ -39,5 +39,5 @@ def some_func(sleep_time=1):
 
 some_func()
 
-# This will print: DEBUG (1, 12) {'k': 'asdasd', 'b': 3}
-func_with_any_args(1, 12, b=3, k='asdasd')
+# This will print: DEBUG (1, 12) {"k": "asdasd", "b": 3}
+func_with_any_args(1, 12, b=3, k="asdasd")

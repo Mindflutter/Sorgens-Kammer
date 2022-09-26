@@ -14,11 +14,11 @@ from pprint import pprint
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--input-file', default='access.log')
+    parser.add_argument("-i", "--input-file", default="access.log")
     args = parser.parse_args()
 
     input_file = args.input_file
-    regex = re.compile('Accessed: \d+\.\d+\.\d+\.\d+')
+    regex = re.compile(r"Accessed: \d+\.\d+\.\d+\.\d+")
     occurrences = []
 
     with open(input_file) as access_log:
@@ -31,5 +31,5 @@ def main():
     pprint(result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

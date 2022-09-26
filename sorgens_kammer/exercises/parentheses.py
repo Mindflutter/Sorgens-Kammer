@@ -1,5 +1,5 @@
 def check_parentheses(s):
-    parentheses = {'{': '}', '[': ']', '(': ')'}
+    parentheses = {"{": "}", "[": "]", "(": ")"}
     stack = []
     for char in s:
         # if opening parenthesis
@@ -30,9 +30,9 @@ def generate(cur, opened, closed, n):
         print(cur)
         return
     if opened < n:
-        generate(cur + '(', opened + 1, closed, n)
+        generate(cur + "(", opened + 1, closed, n)
     if closed < opened:
-        generate(cur + ')', opened, closed + 1, n)
+        generate(cur + ")", opened, closed + 1, n)
 
 
-generate('', 0, 0, 5)
+generate("", 0, 0, 5)

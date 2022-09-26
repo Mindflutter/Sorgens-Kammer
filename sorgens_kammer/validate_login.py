@@ -17,9 +17,9 @@ def validate_1(login):
 
 def validate_2(login):
     login = login.lower()
-    latin_chars = 'abcdefghijklmnpqrstuvwxyz'
-    digits = '1234567890'
-    special_chars = '.-'
+    latin_chars = "abcdefghijklmnpqrstuvwxyz"
+    digits = "1234567890"
+    special_chars = ".-"
     if len(login) <= 20 and login[0] in latin_chars and login[-1] in latin_chars + digits \
             and set(login) == set(login).intersection(latin_chars + digits + special_chars):
         return True
@@ -27,7 +27,7 @@ def validate_2(login):
         return False
 
 
-test_login = 'a4234.sd-fsdv2'
+test_login = "a4234.sd-fsdv2"
 
 start = time.time()
 print(validate_1(test_login))

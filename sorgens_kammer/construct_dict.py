@@ -15,6 +15,6 @@ def construct_dict(key_list, value_list):
 
 
 k = [1, 1, 1, 2, 3, 4, 1, 1, 5, 5, 2, 1, 6, 7, 8, 9]
-v = ['', 2, 3, 4, 5, 6]
+v = ["", 2, 3, 4, 5, 6]
 
 print(construct_dict(k, v))
