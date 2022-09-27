@@ -6,6 +6,15 @@ def f(the_list=[]):
     return the_list
 
 
+# same thing with dicts: gets updated
+def dict_gotcha(d: dict):
+    d.update({"added": "data"})
+
+
+the_dict = {"some": "data"}
+dict_gotcha(the_dict)
+print(the_dict)
+
 # same id, same l
 print(f())
 print(f())
