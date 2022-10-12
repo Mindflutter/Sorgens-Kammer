@@ -23,21 +23,20 @@
 Очень желательно сделать так, чтобы задание 2 эффективно использовало ресурсы многоядерного процессора.
 Также желательно чтобы программа работала быстро.
 """
-
+import multiprocessing
 import os
 import os.path as op
 import random
 import string
 import time
 import uuid
-from multiprocessing.pool import Pool
 from zipfile import ZipFile
 
 from lxml import etree as ET
 
 ZIP_COUNT = 50
 XML_COUNT = 100
-CPU_COUNT = 4
+CPU_COUNT = multiprocessing.cpu_count()
 
 BASE_DIR = "work"
 if not op.exists(BASE_DIR):
@@ -145,7 +144,7 @@ def main():
     # multiprocessing
     init_csv()
     start = time.time()
-    with Pool(CPU_COUNT) as pool:
+    with multiprocessing.Pool(CPU_COUNT) as pool:
         with open(f"{BASE_DIR}/first.csv", "a") as first, \
                 open(f"{BASE_DIR}/second.csv", "a") as second:
             for result in pool.imap_unordered(process_archive, [f"{i}.zip" for i in range(50)]):
