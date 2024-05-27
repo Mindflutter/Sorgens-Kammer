@@ -23,9 +23,9 @@ def func_with_any_args(*args, **kwargs):
 
 def usual_dec(func):
     """ Decorator measuring func execution time. """
-    def wrapped():
+    def wrapped(*args, **kwargs):
         start = time.time()
-        func()
+        func(*args, **kwargs)
         finish = time.time() - start
         print(f"Function {func.__name__} took {finish:.3f} seconds")
 
@@ -37,6 +37,7 @@ def some_func(sleep_time=1):
     time.sleep(sleep_time)
 
 
+# Function some_func took 1.001 seconds
 some_func()
 
 # This will print: DEBUG (1, 12) {"k": "asdasd", "b": 3}

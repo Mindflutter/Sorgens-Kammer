@@ -68,7 +68,7 @@ def pack_archive(name):
 
 def create_archives():
     """ Create N archives via multiprocessing. """
-    with Pool(CPU_COUNT) as pool:
+    with multiprocessing.Pool(CPU_COUNT) as pool:
         pool.map(pack_archive, [f"{i}.zip" for i in range(ZIP_COUNT)])
 
 
