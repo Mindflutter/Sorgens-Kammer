@@ -1,5 +1,5 @@
 def longest_seq(seq: list) -> int:
-    """ Longest sequence of 1"s in a binary vector """
+    """ Longest sequence of 1s in a binary vector """
     seq_cur = seq_max = 0
     for item in seq:
         if item == 0:
